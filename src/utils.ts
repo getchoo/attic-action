@@ -7,7 +7,7 @@ class StringStream extends Writable {
   _write(
     chunk: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>,
     _enc: unknown,
-    next: () => unknown
+    next: () => unknown,
   ) {
     this.chunks.push(Buffer.from(chunk));
     next();
